@@ -7,10 +7,12 @@ import style from './index.module.scss';
 export default class Tabbar extends Component {
     render() {
         return (
-            <div  id={style.Tabbar}>
-               <NavLink to={'/film'}>电影</NavLink>
-               <NavLink to={'/cinema'}>影院</NavLink>
-               <NavLink to={'/my'}>我的</NavLink>
+            <div id={style.Tabbar}>
+                <ul>
+                    <li><NavLink activeClassName={style.focus} to={'/film'}>电影</NavLink></li>
+                    <li><NavLink activeClassName={style.focus} to={'/cinema'}>影院</NavLink></li>
+                    <li><NavLink activeClassName={style.focus} to={'/my'}>我的</NavLink></li>
+                </ul>
             </div>
         )
     }
