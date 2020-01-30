@@ -9,9 +9,9 @@ export default class Tabbar extends Component {
         return (
             <div id={style.Tabbar}>
                 <ul>
-                    <li><NavLink activeClassName={style.focus} to={'/film'}>电影</NavLink></li>
-                    <li><NavLink activeClassName={style.focus} to={'/cinema'}>影院</NavLink></li>
-                    <li><NavLink activeClassName={style.focus} to={'/my'}>我的</NavLink></li>
+                    <li><NavLink activeClassName={style.focus} to={'/Film'}>电影</NavLink></li>
+                    <li><NavLink activeClassName={style.focus} to={'/Cinema'}>影院</NavLink></li>
+                    <li><NavLink activeClassName={style.focus} to={'/My'}>我的</NavLink></li>
                 </ul>
             </div>
         )

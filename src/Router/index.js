@@ -12,12 +12,20 @@ const router = (
     <Router>
         <App>
             <Switch>
-                <route path="/film" component={Film} />
-                <route path="/cinema" component={Cinema} />
-                <route path="/my" component={My} />
+                <Route path="/Film" render={(props)=>{
+                    return <Film {...props}/>
+                }} />
+                <Route path="/Cinema" render={(props)=>{
+                    return <Cinema {...props}/>
+                }} />
+                <Route path="/My" render={(props)=>{
+                    return <My {...props}/>
+                }} />
+                {/* 进行重定向的设置 */}
+                <Redirect from="/" to="/Film" />
             </Switch>
         </App>
     </Router>
-);
+)
 
 export default router;
