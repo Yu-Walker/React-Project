@@ -1,0 +1,30 @@
+#Login_last {
+  position: relative;
+  ol {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: -40px;
+    li {
+      border: none;
+      text-align: center;
+      a {
+        font-size: 13px;
+        color: #fe8c00;
+      }
+    }
+  }
+  p {
+    width: inherit;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    top: 80px;
+    span{
+      color: #df2d2d;
+    }
+  }
+}

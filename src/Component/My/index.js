@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tittle from '../../Common/Tittle';
+import Navbar from './Navbar'
 
 export default class My extends Component {
 
@@ -12,6 +13,8 @@ export default class My extends Component {
         return (
             <div>
                 <Tittle {...this.state} />
+                <Navbar/>
+                {this.props.children}
             </div>
         )
     }

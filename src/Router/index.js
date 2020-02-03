@@ -7,6 +7,9 @@ import Film from '../Component/Film';
 import Cinema from '../Component/Cinema';
 import My from '../Component/My';
 
+import Login_one from '../Component/My/Login_one';
+import Login_twe from '../Component/My/Login_twe';
+
 
 const router = (
     <Router>
@@ -19,8 +22,14 @@ const router = (
                     return <Cinema {...props}/>
                 }} />
                 <Route path="/My" render={(props)=>{
-                    return <My {...props}/>
-                }} />
+                    return <My {...props}>
+                        <Switch>
+                            <Route path="/My/Login_one" component={Login_one}/>
+                            <Route path="/My/Login_twe" component={Login_twe}/>
+                            <Redirect from="/My" to="/My/Login_one"/>
+                        </Switch>
+                    </My>
+                }}/>
                 {/* 进行重定向的设置 */}
                 <Redirect from="/" to="/Film" />
             </Switch>
