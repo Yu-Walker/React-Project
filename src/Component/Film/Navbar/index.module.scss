@@ -1,0 +1,33 @@
+#Navbar {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+
+    p {
+        font-size: 15px;
+        color: #666666;
+    }
+
+    h2 {
+        font-size: 15px;
+        color: #ef4238;
+
+        a{
+            margin: 0 12px;
+            padding-bottom: 12px;
+            color: #000;
+        }
+
+        .focus {
+            color: #ef4238;
+            border-bottom: 1px solid #ef4238;
+        }
+    }
+
+    span {
+        font-weight: 500;
+        color: #ef4238;
+    }
+}

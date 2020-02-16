@@ -10,13 +10,20 @@ import My from '../Component/My';
 import Login_one from '../Component/My/Login_one';
 import Login_twe from '../Component/My/Login_twe';
 
+import NowPlaying from '../Component/Film/NowPlaying';
+import ComingSoon from '../Component/Film/ComingSoon';
 
 const router = (
     <Router>
         <App>
             <Switch>
                 <Route path="/Film" render={(props)=>{
-                    return <Film {...props}/>
+                    return <Film {...props}>
+                            <Switch>
+                                <Route path="/Film/NowPlaying" component={NowPlaying}/>
+                                <Route path="/Film/ComingSoon" component={ComingSoon}/>
+                            </Switch>
+                        </Film>
                 }} />
                 <Route path="/Cinema" render={(props)=>{
                     return <Cinema {...props}/>
