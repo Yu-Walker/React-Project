@@ -2,7 +2,7 @@ import React from 'react';
 
 import NewCounterReactRedux from '../../Common/CounterReactRedux';
 
-import store from '../../Redux/store'
+import store from '../../ReactRedux/store';
 
 import { Provider } from 'react-redux';
 

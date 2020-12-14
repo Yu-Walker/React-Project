@@ -1,0 +1,9 @@
+.Children_12  ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Children_12 ul li {
+    margin-right: 18px;
+}

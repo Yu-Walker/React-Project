@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 // 从redux中创建store；
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
 // 从react-redux中创建Provider、Connect；
 import { Provider, connect } from 'react-redux';
+
+import newAddAction from '../../Actions';
+import newSubAction from '../../Actions';
+// console.log(newAddAction.newAddAction);
 
 // 创建类组件；
 class CounterReactRedux extends React.Component {
@@ -15,15 +19,17 @@ class CounterReactRedux extends React.Component {
     }
 
     render() {
-        console.log(store.getState().num);  // 0
+        // console.log(store.getState().num);  // 0
 
         // 计数，通过store的state传给props，直接通过props就可以将state的数据获取；
         const value = this.props.value;
         // 将修改数据的事件或者是方法传入到props；
         const onAddClick = this.props.onAddClick;
+        const onSubClick = this.props.onSubClick;
 
         return (
             <div>
+                <button onClick={ onSubClick }>点击-1</button>
                 <h1> 计数的数量：{ value } </h1>
                 <button onClick={ onAddClick }>点击+1</button>
             </div>
@@ -32,38 +38,41 @@ class CounterReactRedux extends React.Component {
 }
 
 // 声明一个action；
-const addAction = {
-    type: 'add'
-};
+// const addAction = {
+//     type: 'add'
+// };
 
 // 创建reducer；
-function reducer(state = { num:0 },action) {
+// function reducer(state = { num:0 },action) {
 
-    switch(action.type) {
-        case 'add':
-            state.num++ ;
-        break;
-        default:
-        break;
-    }
-    return {...state};
+//     switch(action.type) {
+//         case 'add':
+//             state.num++ ;
+//         break;
+//         default:
+//         break;
+//     }
+//     return {...state};
 
-}
+// }
 
 // 将reducer传入到store中；
-const store = createStore(reducer);
+// const store = createStore(reducer);
 
 // 将修改state映射到props函数；
 function mapStateToProps( state ) {
     return {
-        value: state.num
+        value: state.nun
     }
 }
 // 将修改state数据的方法，映射到props，默认会传入到store里的dispatch方法；
 function mapDispatchToProps(dispatch) {
     return {
         onAddClick:() => {
-            dispatch(addAction)
+            dispatch(newAddAction.newAddAction)
+        },
+        onSubClick:() => {
+            dispatch(newSubAction.newSubAction)
         }
     }
 }
